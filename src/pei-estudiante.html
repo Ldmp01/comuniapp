@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PEI - Centro Hellen Keller</title>
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="top-bar">
+    <!--Logo y Nombre-->
+    <div class="brand">
+        <img src="img/logo-hellen-keller.png" alt="Logo" class="logo-top">
+        <span class="brand-text">CENTRO HELLEN KELLER</span>
+    </div>
+
+    <!--Accesibilidad-->
+    <div class="accessibility-row">
+        <span class="acc-title-label">Configuración de<br>Accesibilidad</span>
+        
+        <button class="acc-card"><i class='bx bx-volume-full'></i> Activar Voz</button>
+        <button class="acc-card"><i class='bx bx-contrast'></i> Contraste Alto</button>
+        <button class="acc-card"><i class='bx bx-font-size'></i> Aumentar Texto</button>
+        <button class="acc-card"><i class='bx bx-sun'></i> Modo Claro</button>
+        <button class="acc-card"><i class='bx bx-moon'></i> Modo Descanso</button>
+        <button class="acc-card btn-dark-active"><i class='bx bxs-moon'></i> Modo Oscuro</button>
+        <button class="acc-card btn-zoom">ZOOM</button>
+        <button class="acc-card"><i class='bx bx-world'></i> Cambiar lenguaje</button>
+    </div>
+
+    <!--Perfil-->
+    <div class="user-profile">
+        <i class='bx bx-bell notification-icon'></i>
+        <div class="user-info">
+            <strong>Luis Ramirez</strong>
+            <span>Administrador</span>
+        </div>
+        <i class='bx bxs-user-circle user-main-icon'></i>
+    </div>
+    </header>
+    <div class="main-layout">
+
+    <!--Menú Lateral-->
+        <nav class="sidebar">
+    <a href="dashboard-admin.html"><i class='bx bx-home'></i> Inicio</a>
+    <a href="programas.html"><i class='bx bx-book'></i> Programas</a>
+    <a href="usuarios.html"><i class='bx bxs-group'></i> Usuarios</a>
+    <a href="pei-estudiante.html" class="active"><i class='bx bx-file'></i> PEI</a>
+    <a href="registro-progreso.html"><i class='bx bx-line-chart'></i> Progreso</a>
+    </nav>
+
+
+    <!--Contenido Principal-->
+    <main class="content pei-main">
+        <aside class="pei-sidebar">
+            <div class="pei-title-box">
+                <i class='bx bx-user-voice'></i>
+                <h2>Estudiantes</h2>
+            </div>
+            <div class="pei-search">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Buscar estudiante...">
+            </div>
+
+            <div class="student-list-pei">
+                <!-- Estudiante Seleccionado -->
+                <div class="student-card selected">
+                    <i class='bx bxs-user-circle avatar-pei'></i>
+                    <div class="student-info-pei">
+                        <strong>Larry Díaz</strong>
+                        <span>4° Primaria - Sección B</span>
+                        <div class="status-pei edit"><i class='bx bx-edit-alt'></i> En Edición</div>
+                    </div>
+                    <i class='bx bx-chevron-right arrow-pei'></i>
+                </div>
+
+                <div class="student-card">
+                    <i class='bx bxs-user-circle avatar-pei'></i>
+                    <div class="student-info-pei">
+                        <strong>Mariana Isabel López</strong>
+                        <span>5° Primaria - Sección A</span>
+                        <div class="status-pei updated"><i class='bx bx-refresh'></i> Actualizado</div>
+                    </div>
+                </div>
+
+                <div class="student-card">
+                    <i class='bx bxs-user-circle avatar-pei'></i>
+                    <div class="student-info-pei">
+                        <strong>Samuel Eduardo Ortiz</strong>
+                        <span>3° Primaria - Sección C</span>
+                        <div class="status-pei expired">! Vencido</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+            <section class="pei-document-card">
+                <div class="pei-header">
+                    <div class="pei-doc-title">
+                        <div class="doc-icon-purple"><i class='bx bxs-file-doc'></i></div>
+                        <div>
+                            <h1>Plan Educativo Individualizado</h1>
+                            <p>Documento de Adaptación Curricular para <span class="name-purple">Larry Díaz</span></p>
+                        </div>
+                    </div>
+                    <button class="btn-guardar">GUARDAR PLAN</button>
+                </div>
+
+                <div class="pei-section">
+                    <h3 class="section-title-purple"><i class='bx bx-user'></i> I. Datos del Estudiante</h3>
+                    <hr class="line-purple">
+                    <div class="pei-form-row">
+                        <div class="pei-input-group">
+                            <label>Nombre Completo</label>
+                            <input type="text" value="Larry Díaz Martínez" readonly>
+                        </div>
+                        <div class="pei-input-group">
+                            <label>Grado / Nivel</label>
+                            <input type="text" value="4° Primaria - Sección B" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pei-section">
+                    <h3 class="section-title-purple"><i class='bx bx-file'></i> II. Perfil del Alumno</h3>
+                    <hr class="line-purple">
+                    <div class="pei-text-area-group">
+                        <label>Fortalezas y Capacidades</label>
+                        <div class="text-content-box">
+                            Dificultad en la decodificación de textos complejos. Requiere apoyos visuales constantes para seguir instrucciones secuenciales. Se distrae con facilidad en ambientes con alta estimulación auditiva.
+                        </div>
+                    </div>
+                    <div class="pei-text-area-group">
+                        <label>Barreras para el Aprendizaje</label>
+                        <div class="text-content-box">
+                            Dificultad en la decodificación de textos complejos. Requiere apoyos visuales constantes para seguir instrucciones secuenciales. Se distrae con facilidad en ambientes con alta estimulación auditiva.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer-dark">
+        <div class="footer-nav">
+            <a href="#"><i class='bx bx-home-alt'></i> Inicio</a>
+            <a href="#"><i class='bx bx-user'></i> Mi Perfil</a>
+            <a href="#"><i class='bx bx-help-circle'></i> Centro de Ayuda</a>
+            <a href="login.html"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-info">
+            <p>Centro Nacional de Educación Hellen Keller v2.4 - Sistema de Gestión Inclusiva</p>
+        </div>
+    </footer>
+
+</body>
+</html>

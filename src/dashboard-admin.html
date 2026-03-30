@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Centro Hellen Keller</title>
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="top-bar">
+    <!--Logo y Nombre-->
+    <div class="brand">
+        <img src="img/logo-hellen-keller.png" alt="Logo" class="logo-top">
+        <span class="brand-text">CENTRO HELLEN KELLER</span>
+    </div>
+
+    <!--Accesibilidad-->
+    <div class="accessibility-row">
+        <span class="acc-title-label">Configuración de<br>Accesibilidad</span>
+        
+        <button class="acc-card"><i class='bx bx-volume-full'></i> Activar Voz</button>
+        <button class="acc-card"><i class='bx bx-contrast'></i> Contraste Alto</button>
+        <button class="acc-card"><i class='bx bx-font-size'></i> Aumentar Texto</button>
+        <button class="acc-card"><i class='bx bx-sun'></i> Modo Claro</button>
+        <button class="acc-card"><i class='bx bx-moon'></i> Modo Descanso</button>
+        <button class="acc-card btn-dark-active"><i class='bx bxs-moon'></i> Modo Oscuro</button>
+        <button class="acc-card btn-zoom">ZOOM</button>
+        <button class="acc-card"><i class='bx bx-world'></i> Cambiar lenguaje</button>
+    </div>
+
+    <!--Perfil-->
+    <div class="user-profile">
+        <i class='bx bx-bell notification-icon'></i>
+        <div class="user-info">
+            <strong>Luis Ramirez</strong>
+            <span>Administrador</span>
+        </div>
+        <i class='bx bxs-user-circle user-main-icon'></i>
+    </div>
+    </header>
+    <div class="main-layout">
+
+    <!--Menú Lateral-->
+    <nav class="sidebar">
+    <a href="dashboard-admin.html" class="active"><i class='bx bx-home'></i> Inicio</a>
+    <a href="programas.html"><i class='bx bx-book'></i> Programas</a>
+    <a href="usuarios.html"><i class='bx bxs-group'></i> Usuarios</a>
+    <a href="pei-estudiante.html"><i class='bx bx-file'></i> PEI</a>
+    <a href="registro-progreso.html"><i class='bx bx-line-chart'></i> Progreso</a>
+    </nav>
+
+
+    <!--Contenido Principal-->
+    <main class="content">
+            <div class="content-header">
+                <div>
+                    <h1>Panel de Administración</h1>
+                    <p>Bienvenido de nuevo al Centro Hellen Keller.</p>
+                    <p>Este es su resumen:</p>
+                </div>
+                <div class="header-buttons">
+        <button class="btn-agenda">
+            <span class="icon-box">
+                <i class='bx bx-calendar'></i>
+            </span>
+            Agenda Diaria
+        </button>
+        
+        <button class="btn-reports">
+            Descargar Reportes
+        </button>
+    </div>
+            </div>
+
+            <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Estudiantes</h3>
+            <div class="stat-icon-box">
+                <i class='bx bx-group'></i>
+            </div>
+            <div class="stat-number">128</div>
+            <div class="stat-footer">
+                <span class="trend-value">+5%</span>
+                <span class="trend-text">Estudiantes matriculados este ciclo</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Terapias Activas</h3>
+            <div class="stat-icon-box">
+                <i class='bx bx-book-open'></i>
+            </div>
+            <div class="stat-number">45</div>
+            <div class="stat-footer">
+                <span class="trend-value">+12%</span>
+                <span class="trend-text">Programas de intervención en curso</span>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <h3>Docentes</h3>
+            <div class="stat-icon-box">
+                <i class='bx bx-user-plus'></i>
+            </div>
+            <div class="stat-number">18</div>
+            <div class="stat-footer">
+                <span class="trend-value">0%</span>
+                <span class="trend-text">Personal especializado activo</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="card-wireframe activity-card">
+            <h3><i class='bx bx-time-five' style="color: #701dff;"></i> Actividad Reciente</h3>
+            <p class="subtitle">Últimas actualizaciones del sistema</p>
+            
+            <ul class="activity-list">
+                <li class="activity-item">
+                    <i class='bx bx-check-circle'></i>
+                    <div class="activity-content">
+                        <strong>PEI Actualizado</strong>
+                        <span>Juan Pérez</span>
+                    </div>
+                    <span class="activity-time">Hace 1 hora</span>
+                </li>
+                <li class="activity-item">
+                    <i class='bx bx-up-arrow-alt' style="transform: rotate(45deg);"></i>
+                    <div class="activity-content">
+                        <strong>Nuevo Registro</strong>
+                        <span>María García</span>
+                    </div>
+                    <span class="activity-time">Hace 5 horas</span>
+                </li>
+                <li class="activity-item">
+                    <i class='bx bx-up-arrow-alt' style="transform: rotate(45deg);"></i>
+                    <div class="activity-content">
+                        <strong>Reporte Mensual</strong>
+                        <span>Programa Autismo</span>
+                    </div>
+                    <span class="activity-time">Ayer</span>
+                </li>
+            </ul>
+            <a href="#" class="view-history">Ver todo el historial</a>
+        </div>
+
+        <div class="card-wireframe chart-main-card">
+            <h3>Progreso Educativo</h3>
+            <p class="subtitle">Crecimiento de programas y estudiantes (2026)</p>
+            <div class="chart-wrapper">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="management-banner">
+        <div class="banner-left">
+            <div class="banner-icon-container">
+                <i class='bx bx-line-chart'></i>
+            </div>
+            <div class="banner-text">
+                <h3>Gestión de Reportes</h3>
+                <p>Acceda a las métricas avanzadas y genere documentos PDF para la junta directiva y el ministerio de educación</p>
+            </div>
+        </div>
+        <button class="btn-generate">Generar Reporte Mensual</button>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer-dark">
+        <div class="footer-nav">
+            <a href="#"><i class='bx bx-home-alt'></i> Inicio</a>
+            <a href="#"><i class='bx bx-user'></i> Mi Perfil</a>
+            <a href="#"><i class='bx bx-help-circle'></i> Centro de Ayuda</a>
+            <a href="login.html"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-info">
+            <p>Centro Nacional de Educación Hellen Keller v2.4 - Sistema de Gestión Inclusiva</p>
+        </div>
+    </footer>
+
+        <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Programas - Centro Hellen Keller</title>
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="top-bar">
+    <!--Logo y Nombre-->
+    <div class="brand">
+        <img src="img/logo-hellen-keller.png" alt="Logo" class="logo-top">
+        <span class="brand-text">CENTRO HELLEN KELLER</span>
+    </div>
+
+    <!--Accesibilidad-->
+    <div class="accessibility-row">
+        <span class="acc-title-label">Configuración de<br>Accesibilidad</span>
+        
+        <button class="acc-card"><i class='bx bx-volume-full'></i> Activar Voz</button>
+        <button class="acc-card"><i class='bx bx-contrast'></i> Contraste Alto</button>
+        <button class="acc-card"><i class='bx bx-font-size'></i> Aumentar Texto</button>
+        <button class="acc-card"><i class='bx bx-sun'></i> Modo Claro</button>
+        <button class="acc-card"><i class='bx bx-moon'></i> Modo Descanso</button>
+        <button class="acc-card btn-dark-active"><i class='bx bxs-moon'></i> Modo Oscuro</button>
+        <button class="acc-card btn-zoom">ZOOM</button>
+        <button class="acc-card"><i class='bx bx-world'></i> Cambiar lenguaje</button>
+    </div>
+
+    <!--Perfil-->
+    <div class="user-profile">
+        <i class='bx bx-bell notification-icon'></i>
+        <div class="user-info">
+            <strong>Luis Ramirez</strong>
+            <span>Administrador</span>
+        </div>
+        <i class='bx bxs-user-circle user-main-icon'></i>
+    </div>
+    </header>
+    <div class="main-layout">
+
+    <!--Menú Lateral-->
+    <nav class="sidebar">
+    <a href="dashboard-admin.html"><i class='bx bx-home'></i> Inicio</a>
+    <a href="programas.html" class="active"><i class='bx bx-book'></i> Programas</a>
+    <a href="usuarios.html"><i class='bx bxs-group'></i> Usuarios</a>
+    <a href="pei-estudiante.html"><i class='bx bx-file'></i> PEI</a>
+    <a href="registro-progreso.html"><i class='bx bx-line-chart'></i> Progreso</a>
+    </nav>
+
+
+    <!--Contenido Principal-->
+    <main class="content">
+        <div class="content-header">
+            <div>
+                <p style="color: #701dff; font-weight: 800; font-size: 12px; margin-bottom: 5px;"> Módulo Administrativo</p>
+                <h1>Gestión de Programas</h1>
+                <p>Supervisión y control de terapias educativas y programas de rehabilitación integral.</p>
+            </div>
+            <button class="btn-agenda" style="padding: 15px 30px;">
+                + Registrar Nueva Terapia
+            </button>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box-wrapper">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Buscar programa o especialidad...">
+            </div>
+            <div class="action-buttons">
+                <button class="btn-action-outline">
+                    <i class='bx bx-filter'></i> Filtros
+                </button>
+                <button class="btn-action-outline">
+                    <i class='bx bx-export'></i> Exportar
+            </button>
+    </div>
+        </div>
+
+        <div class="mini-stats-grid">
+            <div class="mini-stat-card purple-bg">
+                <i class='bx bx-book-alt'></i>
+                <div class="mini-stat-info">
+                    <span>Total Programas</span>
+                    <strong>4</strong>
+                </div>
+            </div>
+            <div class="mini-stat-card">
+                <i class='bx bx-check-circle'></i>
+                <div class="mini-stat-info">
+                    <span>Terapias Activas</span>
+                    <strong>2</strong>
+                </div>
+            </div>
+            <div class="mini-stat-card">
+                <i class='bx bx-time'></i>
+                <div class="mini-stat-info">
+                    <span>En Revisión</span>
+                    <strong>1</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wireframe table-container-special">
+            <table class="data-table-programs">
+                <thead>
+                    <tr>
+                        <th>Nombre Programa</th>
+                        <th>Especialidad</th>
+                        <th>Encargado</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="program-name-cell">
+                            <div class="program-icon"><i class='bx bx-pulse'></i></div>
+                            <div>
+                                <strong>Taller de Vida Diaria Independiente</strong><br>
+                                <small>ID: PRG-004</small>
+                            </div>
+                        </td>
+                        <td>Terapia Ocupacional</td>
+                        <td><div class="user-cell"><i class='bx bx-user-circle'></i> Lic. Daniel González</div></td>
+                        <td><span class="status-pill active-pill">Activo</span></td>
+                        <td><i class='bx bx-dots-horizontal-rounded'></i></td>
+                    </tr>
+                    <tr>
+                        <td class="program-name-cell">
+                            <div class="program-icon"><i class='bx bx-pulse'></i></div>
+                            <div>
+                                <strong>Terapia de Orientación y Movilidad</strong><br>
+                                <small>ID: PRG-004</small>
+                            </div>
+                        </td>
+                        <td>Rehabilitación Física</td>
+                        <td><div class="user-cell"><i class='bx bx-user-circle'></i> Dr. Johanna Benítez</div></td>
+                        <td><span class="status-pill active-pill">Activo</span></td>
+                        <td><i class='bx bx-dots-horizontal-rounded'></i></td>
+                    </tr>
+                    <tr>
+                        <td class="program-name-cell">
+                            <div class="program-icon"><i class='bx bx-pulse'></i></div>
+                            <div>
+                                <strong>Estimulación Temprana Sensorial</strong><br>
+                                <small>ID: PRG-004</small>
+                            </div>
+                        </td>
+                        <td>Psicopedagogía</td>
+                        <td><div class="user-cell"><i class='bx bx-user-circle'></i> Dra. Larry Díaz</div></td>
+                        <td><span class="status-pill review-pill">En Revisión</span></td>
+                        <td><i class='bx bx-dots-horizontal-rounded'></i></td>
+                    </tr>
+                    <tr>
+                        <td class="program-name-cell">
+                            <div class="program-icon"><i class='bx bx-pulse'></i></div>
+                            <div>
+                                <strong>Programa de Alfabetización Braille I</strong><br>
+                                <small>ID: PRG-004</small>
+                            </div>
+                        </td>
+                        <td>Educación</td>
+                        <td><div class="user-cell"><i class='bx bx-user-circle'></i> Ing. Stephanie Méndez</div></td>
+                        <td><span class="status-pill paused-pill">Pausado</span></td>
+                        <td><i class='bx bx-dots-horizontal-rounded'></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer-dark">
+        <div class="footer-nav">
+            <a href="#"><i class='bx bx-home-alt'></i> Inicio</a>
+            <a href="#"><i class='bx bx-user'></i> Mi Perfil</a>
+            <a href="#"><i class='bx bx-help-circle'></i> Centro de Ayuda</a>
+            <a href="login.html"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-info">
+            <p>Centro Nacional de Educación Hellen Keller v2.4 - Sistema de Gestión Inclusiva</p>
+        </div>
+    </footer>
+
+</body>
+</html>

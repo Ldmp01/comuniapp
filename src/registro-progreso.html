@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Progreso - Hellen Keller</title>
+    <link rel="stylesheet" href="css/diseño.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="top-bar">
+    <!--Logo y Nombre-->
+    <div class="brand">
+        <img src="img/logo-hellen-keller.png" alt="Logo" class="logo-top">
+        <span class="brand-text">CENTRO HELLEN KELLER</span>
+    </div>
+
+    <!--Accesibilidad-->
+    <div class="accessibility-row">
+        <span class="acc-title-label">Configuración de<br>Accesibilidad</span>
+        
+        <button class="acc-card"><i class='bx bx-volume-full'></i> Activar Voz</button>
+        <button class="acc-card"><i class='bx bx-contrast'></i> Contraste Alto</button>
+        <button class="acc-card"><i class='bx bx-font-size'></i> Aumentar Texto</button>
+        <button class="acc-card"><i class='bx bx-sun'></i> Modo Claro</button>
+        <button class="acc-card"><i class='bx bx-moon'></i> Modo Descanso</button>
+        <button class="acc-card btn-dark-active"><i class='bx bxs-moon'></i> Modo Oscuro</button>
+        <button class="acc-card btn-zoom">ZOOM</button>
+        <button class="acc-card"><i class='bx bx-world'></i> Cambiar lenguaje</button>
+    </div>
+
+    <!--Perfil-->
+    <div class="user-profile">
+        <i class='bx bx-bell notification-icon'></i>
+        <div class="user-info">
+            <strong>Luis Ramirez</strong>
+            <span>Administrador</span>
+        </div>
+        <i class='bx bxs-user-circle user-main-icon'></i>
+    </div>
+    </header>
+    <div class="main-layout">
+
+    <!--Menú Lateral-->
+        <nav class="sidebar">
+    <a href="dashboard-admin.html"><i class='bx bx-home'></i> Inicio</a>
+    <a href="programas.html"><i class='bx bx-book'></i> Programas</a>
+    <a href="usuarios.html"><i class='bx bxs-group'></i> Usuarios</a>
+    <a href="pei-estudiante.html"><i class='bx bx-file'></i> PEI</a>
+    <a href="registro-progreso.html" class="active"><i class='bx bx-line-chart'></i> Progreso</a>
+    </nav>
+
+
+    <!--Contenido Principal-->
+    <main class="content-container">
+        <div class="page-header">
+            <div class="header-icon-title">
+                <i class='bx bx-clipboard title-main-icon'></i>
+                <div>
+                    <h1>Registro de Progreso</h1>
+                    <p>Complete la información del avance diario del estudiante.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta del Formulario -->
+        <section class="form-card">
+            <h2 class="section-subtitle"><i class='bx bx-refresh'></i> Información del Reporte</h2>
+            <p class="subtitle-desc">Asegúrese de que los datos sean precisos para el seguimiento del PEI.</p>
+
+            <form class="progress-form">
+                <div class="form-row">
+                    <div class="input-group-field">
+                        <label>Estudiante</label>
+                        <input type="text" value="Larry Díaz Martínez" readonly>
+                    </div>
+                    <div class="input-group-field">
+                        <label>Cédula</label>
+                        <input type="text" value="118240569" readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group-field">
+                        <label>Fecha del Registro</label>
+                        <div class="input-with-icon">
+                            <i class='bx bx-calendar'></i>
+                            <input type="date" value="2026-03-02">
+                        </div>
+                    </div>
+                    <div class="input-group-field">
+                        <label>Nivel de Avance</label>
+                        <select>
+                            <option selected disabled>Seleccione el nivel</option>
+                            <option>Inicial</option>
+                            <option>Intermedio</option>
+                            <option>Avanzado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="full-row">
+                    <label>Observaciones Detalladas</label>
+                    <textarea placeholder="Describa el comportamiento, logros específicos o dificultades encontradas durante la sesión..."></textarea>
+                    <span class="char-count">* Máximo 1000 caracteres. Sea descriptivo para el análisis del PEI.</span>
+                </div>
+
+                <button type="submit" class="btn-submit">Subir Reporte de Avance</button>
+            </form>
+        </section>
+
+        <div class="shortcut-bar">
+            <i class='bx bx-info-circle'></i>
+            <p>Atajo de teclado: Presione <span class="key">Enter</span> para enviar o <span class="key">Tab</span> para navegar entre campos</p>
+        </div>
+    </main>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer-dark">
+        <div class="footer-nav">
+            <a href="#"><i class='bx bx-home-alt'></i> Inicio</a>
+            <a href="#"><i class='bx bx-user'></i> Mi Perfil</a>
+            <a href="#"><i class='bx bx-help-circle'></i> Centro de Ayuda</a>
+            <a href="login.html"><i class='bx bx-log-out'></i> Cerrar Sesión</a>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-info">
+            <p>Centro Nacional de Educación Hellen Keller v2.4 - Sistema de Gestión Inclusiva</p>
+        </div>
+    </footer>
+
+</body>
+</html>
