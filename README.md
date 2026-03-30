@@ -91,7 +91,6 @@ Incluyen las siguientes pantallas:
 
 ## Integrantes del Equipo
 
-- **Luis Diego Ramírez Hernández** – Scrum Master  
 - **Johanna Benítez Blandón** – Diseñadora UX/UI  
 - **Larry Díaz Martínez** – Desarrollador Frontend  
 
