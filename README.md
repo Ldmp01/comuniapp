@@ -100,7 +100,7 @@ Incluyen las siguientes pantallas:
 ## Repositorio del Proyecto
 
 Repositorio oficial del proyecto:
-https://github.com/luisramirezh-cr/comuniapp
+https://github.com/Ldmp01/comuniapp
 
 ---
 
