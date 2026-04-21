@@ -65,6 +65,22 @@ El sistema contempla diferentes roles con permisos específicos:
 
 ---
 
+## Funcionalidades del Sistema Implementadas
+
+
+1.  **Autenticación y Redirección:** Sistema de login funcional que valida credenciales y redirige al Dashboard administrativo.
+2.  **Dashboard con Analítica:** Visualización de métricas institucionales mediante gráficos interactivos desarrollados con la librería **Chart.js**.
+3.  **Filtro de Búsqueda Universal:** Algoritmo que permite filtrar en tiempo real tablas de programas, usuarios y listas de estudiantes en el PEI.
+4.  **CRUD Simulado (Crear):** Funcionalidad para registrar nuevas terapias o programas, insertando elementos dinámicamente en el DOM mediante `createElement`.
+5.  **CRUD Simulado (Editar y Eliminar):** Sistema de gestión de registros que permite modificar nombres o eliminar filas de las tablas mediante delegación de eventos.
+6.  **Sincronización Dinámica de Datos (PEI):** Al seleccionar un estudiante de la lista, el sistema actualiza automáticamente el documento PEI con la información correspondiente.
+7.  **Validación de Formularios:** Control de errores en el registro de progreso y login, asegurando que los campos obligatorios se completen correctamente.
+8.  **Accesibilidad (Zoom):** Herramienta integrada para ajustar la escala visual de la interfaz, facilitando la lectura para personas con baja visión.
+9.  **Sistema de Notificaciones:** Feedback visual mediante alertas dinámicas (Toasts) que notifican al usuario sobre el estado del sistema.
+
+
+---
+
 ## Wireframes del Sistema
 
 Los wireframes del sistema se encuentran disponibles en la carpeta:
@@ -86,6 +102,8 @@ Incluyen las siguientes pantallas:
 - **HTML5**
 - **CSS3**
 - **JavaScript**
+- **Chart.js**
+- **Boxicons**
 
 ---
 
@@ -109,4 +127,4 @@ Proyecto en desarrollo como parte del curso de **Diseño y Programación web**.
 ---
 **Curso:** Diseño y programación Web  
 **Institución:** Universidad CENFOTEC  
-**Fecha:** 01 de abril de 2026
+**Fecha:** 22 de abril de 2026
